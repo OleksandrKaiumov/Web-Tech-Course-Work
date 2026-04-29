@@ -1,0 +1,295 @@
+body {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+    background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-transparent-color) 100%);
+    min-height: 5rem;
+    height: 6vh;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    justify-content: space-between;
+}
+
+.main-header__link {
+    height: 50%;
+    margin-left: 3%;
+}
+
+.main-header__logo {
+    height: 100%;
+}
+
+.main-header__menu-button {
+    height: 50%;
+    aspect-ratio: 1/1;
+    margin-right: 20px;
+    background-image: url("../images/MenuButton.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-header__menu-button--active {
+    background-image: url("../images/CloseButton.svg");
+}
+
+.main-footer {
+    width: 100%;
+    background-image: url("../images/FooterBG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-footer__content {
+    padding: 5%;
+    width: auto;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-areas:
+        "footer-info footer-links footer-to-top"
+        "footer-rights footer-rights footer-rights";
+    gap: 1%;
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 1/1) {
+    .main-footer__content {
+        grid-auto-columns: 100%;
+        grid-template-areas:
+            "footer-to-top"
+            "footer-info"
+            "footer-links"
+            "footer-rights";
+    }
+}
+
+.main-footer__info-grid {
+    grid-area: footer-info;
+    display: grid;
+    gap: 0.2em;
+}
+
+.main-footer__logo {
+    height: 3em;
+}
+
+.main-footer__text {
+    color: var(--main-color);
+    font-family: var(--secondary-font);
+    font-size: clamp(0.3rem, calc(0.2vw + 1rem), 2.5rem);
+    width: 100%;
+}
+
+.main-footer__links-grid {
+    grid-area: footer-links;
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-auto-rows: auto;
+    gap: 1.3em;
+}
+
+@media (max-width: 1024px) {
+    .main-footer__links-grid {
+        margin: 2em 0;
+    }
+}
+
+.main-footer__link {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: clamp(0.3rem, calc(0.2vw + 1rem), 2.5rem);
+    width: 100%;
+    margin: 0;
+    justify-self: start;
+    align-self: flex-start;
+}
+
+.main-footer__back-to-top-button {
+    width: 16em;
+    aspect-ratio: 6/1;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.3rem, calc(0.5vw + 1rem), 4rem);
+    color: white;
+    font-family: var(--title-font);
+    font-weight: 700;
+    background-image: var(--button-default-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: footer-to-top;
+    justify-self: end;
+    align-self: start;
+}
+
+@media (max-width: 1024px) {
+    .main-footer__back-to-top-button {
+        margin-top: 1em;
+        margin-bottom: 3em;
+        justify-self: center;
+        width: 17em;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-footer__back-to-top-button {
+        width: 100%;
+    }
+}
+
+.main-footer__back-to-top-button:hover {
+    background-image: var(--button-hovered-url);
+}
+
+.main-footer__back-to-top-button:active {
+    background-image: var(--button-clicked-url);
+}
+
+.main-footer__back-to-top-button:disabled {
+    background-image: var(--button-disabled-url);
+}
+
+.main-footer__rights-text {
+    grid-area: footer-rights;
+    color: #CECECE;
+}
+
+@media (max-width: 1024px) {
+    .main-footer__rights-text {
+        margin-bottom: 3em;
+    }
+}
+
+.nav-menu {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/MenuBG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: -100vh;
+    transition: 0.3s ease;
+}
+
+.nav-menu--active {
+    top: 0;
+}
+
+.nav-menu__grid {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    justify-content: space-between;
+    height: 85vh;
+    width: 95%;
+    grid-template-areas:
+        "nav-links nav-links nav-links"
+        "nav-number nav-number nav-number"
+        "nav-email . ."
+        ". . nav-location";
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 1/1) {
+    .nav-menu__grid {
+        justify-content: space-around;
+        width: 100%;
+        grid-template-areas:
+            "nav-links"
+            "nav-email"
+            "nav-number"
+            "nav-location";
+    }
+}
+
+.nav-menu__links {
+    display: grid;
+    gap: 2em;
+    grid-area: nav-links;
+}
+
+.nav-menu__link {
+    color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-menu__link-description {
+    font-family: var(--secondary-font);
+    font-size: 0.7em;
+}
+
+@media (min-width: 2100px) {
+    .nav-menu__link-description {
+        font-size: 1.2em;
+    }
+}
+
+.nav-menu__link-title {
+    margin: 0.1em 0;
+    font-family: var(--title-font);
+    font-size: clamp(2.5rem, calc(2.5vw + 1rem), 7.5rem);
+}
+
+.nav-menu__link-title--active {
+    color: var(--selected-option-color);
+    text-shadow: 0 0 20px var(--selected-option-shadow-color);
+}
+
+.nav-menu__info {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    justify-self: start;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+@media (min-width: 2100px) {
+    .nav-menu__info {
+        font-size: 1.2em;
+    }
+}
+
+.nav-menu__email {
+    grid-area: nav-email;
+}
+
+.nav-menu__number {
+    grid-area: nav-number;
+}
+
+.nav-menu__location {
+    grid-area: nav-location;
+}
+
+@media (min-width: 1024px) and (min-aspect-ratio: 1/1) {
+    .nav-menu__email {
+        width: auto;
+        grid-row: 4/4;
+        grid-column: 1/3;
+    }
+
+    .nav-menu__number {
+        grid-row: 4/4;
+        grid-column: 2/3;
+    }
+
+    .nav-menu__location {
+        grid-row: 4/4;
+        grid-column: 3/3;
+    }
+}

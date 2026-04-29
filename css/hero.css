@@ -1,0 +1,105 @@
+.hero-section {
+    display: grid;
+    align-items: center;
+    height: fit-content;
+    width: auto;
+}
+
+.hero-section__image {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: -5;
+}
+
+.hero-section__grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    grid-template-rows: 1fr auto auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background: var(--bg-color);
+    background: linear-gradient(0deg, var(--bg-color) 0%, var(--bg-transparent-color) 50%);
+
+}
+
+.hero-section__title {
+    font-family: var(--title-font);
+    font-size: clamp(1.5rem, calc(3.6vw + 1rem), 10rem);
+    display: block;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    align-self: start;
+    margin-top: 10%;
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 1/1) {
+    .hero-section__title {
+        font-size: clamp(1.5rem, calc(6.5vw + 1rem), 8.5rem);
+        margin-top: 30%;
+    }
+}
+
+.hero-section__title--centered {
+    align-self: center;
+    margin-top: 0;
+}
+
+.hero-section__buttons-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.hero-section__button {
+    width: 16em;
+    aspect-ratio: 6/1;
+    outline: none;
+    background: none;
+    border: none;
+    padding: auto;
+    margin: 0;
+    font-size: clamp(1.3rem, calc(0.5vw + 1rem), 4rem);
+    color: white;
+    font-family: var(--title-font);
+    font-weight: 700;
+    background-image: var(--button-default-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .hero-section__button {
+        width: 17em;
+    }
+}
+
+.hero-section__button:hover {
+    background-image: var(--button-hovered-url);
+}
+
+.hero-section__button:active {
+    background-image: var(--button-clicked-url);
+}
+
+.hero-section__button:disabled {
+    background-image: var(--button-disabled-url);
+}
+
+.hero-section__slogan {
+    color: var(--main-color);
+    font-family: var(--title-font);
+    font-size: clamp(1.5rem, calc(2vw + 1rem), 7rem);
+    display: block;
+    font-weight: 700;
+    margin: 1em 0;
+    text-align: center;
+}

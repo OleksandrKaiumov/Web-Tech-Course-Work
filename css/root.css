@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #090909;
+    --bg-transparent-color: #09090900;
+    --main-color: #FFEECB;
+    --secondary-color: #FFFFFF;
+    --selected-option-color: #B39C4D;
+    --selected-option-shadow-color: #b39b4d8f;
+    --field-outline-color: #5E532B;
+    --field-focused-outline-color: #B39C4D;
+    --field-placeholder-color: #999999;
+    --field-error-color: #B34D4D;
+    --button-default-url: url("../images/ButtonDefault.png");
+    --button-hovered-url: url("../images/ButtonHovered.png");
+    --button-clicked-url: url("../images/ButtonClicked.png");
+    --button-disabled-url: url("../images/ButtonDisabled.png");
+    --title-font: 'Cinzel Decorative';
+    --secondary-font: 'Noto Sans';
+}

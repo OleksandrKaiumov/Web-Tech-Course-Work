@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta lang="uk-ua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body id="top">
+    <header class="main-header">
+        <a class="main-header__link" href="index.html">
+            <img class="main-header__logo" src="../images/Logo.svg" alt="logo">
+        </a>
+        <div id="menuButton" class="main-header__menu-button"></div>
+    </header>
+    <nav id="navMenu" class="nav-menu">
+        <div class="nav-menu__grid">
+            <div class="nav-menu__links">
+                <a class="nav-menu__link" href="index.html">
+                    <small class="nav-menu__link-description">About project</small>
+                    <p id="indexPageOption" class="nav-menu__link-title">HOME</p>
+                </a>
+                <a class="nav-menu__link" href="lore.html">
+                    <small class="nav-menu__link-description">Story of the world</small>
+                    <p id="lorePageOption" class="nav-menu__link-title">LORE</p>
+                </a>
+                <a class="nav-menu__link" href="glossary.html">
+                    <small class="nav-menu__link-description">Learn more</small>
+                    <p id="glossaryPageOption" class="nav-menu__link-title">GLOSSARY</p>
+                </a>
+                <a class="nav-menu__link" href="contacts.html">
+                    <small class="nav-menu__link-description">Write us</small>
+                    <p id="contactsPageOption" class="nav-menu__link-title">CONTACTS</p>
+                </a>
+            </div>
+            <div class="nav-menu__info nav-menu__email">paganbloodgames@mail.com</div>
+            <div class="nav-menu__info nav-menu__number">+380-00-123-48-56</div>
+            <div class="nav-menu__info nav-menu__location">Lviv, Ukraine</div>
+        </div>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <img class="hero-section__image" src="../images/HeroImageHome.png" alt="hero image">
+            <div class="hero-section__grid">
+                <p class="hero-section__title">PAGAN BLOOD</p>
+                <div class="hero-section__buttons-grid">
+                    <button class="hero-section__button">
+                        Add to wishlist
+                    </button>
+                    <button class="hero-section__button">
+                        Subscribe to newsletter
+                    </button>
+                </div>
+                <div class="hero-section__slogan">Not all evil lurks in darkness</div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="content-section__title-grid">
+                <img class="content-section__decoration" src="../images/Decoration.svg" alt="decoration">
+                <p class="content-section__title">Dive into The Borderlands</p>
+                <img class="content-section__decoration" src="../images/Decoration.svg" alt="decoration">
+            </div>
+            <div class="content-section__text">
+                Dive into Porubizhzhia (The Borderlands) — a dark fantasy world inspired by Ukrainian mythology,
+                shattered by a war of men, spirits, and faith, in a roguelike shooter with high-mobility movement
+                mechanics.
+            </div>
+            <div class="content-section__text">
+                You are the Bright-faced, an elite warrior of the Sunfaith, sent where ordinary armies do not survive:
+                into cursed forests, dead waters, mountain strongholds, and ruined cities. Slaughter the unclean, break
+                the strongholds of the Old Order, and reclaim the land for the new rule — even as every step forward
+                reveals a more terrifying truth about Porubizhzhia, faith, and your very self.
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="contact-section__header">
+                <img class="contact-section__decoration" src="../images/Decoration2.svg" alt="decoration">
+                <p class="contact-section__title">Let’s connect!</p>
+                <p class="contact-section__description">Please contact us regarding collaboration and partnership opportunities
+                </p>
+            </div>
+            <form id="contactForm" class="contact-section__form">
+                <div class="contact-section__field-container" style="grid-area: first-name;">
+                    <input id="firstNameField" placeholder="First name" type="text" class="contact-section__field">
+                    <small id="firstNameFieldError" class="contact-section__error-message contact-section__error-message--hidden">This field is required
+                    </small>
+                </div>
+        
+                <div class="contact-section__field-container" style="grid-area: last-name;">
+                    <input id="lastNameField" placeholder="Last name" type="text" class="contact-section__field">
+                    <small id="lastNameFieldError" class="contact-section__error-message contact-section__error-message--hidden">
+                        This field is required
+                    </small>
+                </div>
+        
+                <div class="contact-section__field-container" style="grid-area: email;">
+                    <input id="emailField" placeholder="Email" type="text" class="contact-section__field">
+                    <small id="emailFieldError" class="contact-section__error-message contact-section__error-message--hidden">
+                        Enter a valid email address
+                    </small>
+                </div>
+        
+                <div class="contact-section__field-container" style="grid-area: theme;">
+                    <input id="themeField" placeholder="Theme" type="text" class="contact-section__field">
+                    <small id="themeFieldError" class="contact-section__error-message contact-section__error-message--hidden">
+                        This field is required
+                    </small>
+                </div>
+        
+                <div class="contact-section__field-container" style="grid-area: message;">
+                    <textarea id="messageField" placeholder="Enter your message" type="text" class="contact-section__field"
+                        style="resize: none;"></textarea>
+                    <small id="messageFieldError" class="contact-section__error-message contact-section__error-message--hidden">
+                        This field is required
+                    </small>
+                </div>
+            </form>
+            <button id="sendButton" class="contact-section__send-button">Send Message</button>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <section class="main-footer__content">
+            <div class="main-footer__info-grid">
+                <a href="index.html">
+                    <img class="main-footer__logo" src="../images/Logo.svg" alt="logo">
+                </a>
+                <p class="main-footer__text">paganbloodgames@mail.com</p>
+                <p class="main-footer__text">+380-00-123-48-56</p>
+            </div>
+            <div class="main-footer__links-grid">
+                <a href="index.html" class="main-footer__link">Home</a>
+                <a href="https://www.instagram.com/"  class="main-footer__link" target="_blank">Instagram</a>
+                <a href="lore.html"  class="main-footer__link">Lore</a>
+                <a href="https://www.linkedin.com/" class="main-footer__link" target="_blank">LinkedIn</a>
+                <a href="glossary.html"  class="main-footer__link">Glossary</a>
+                <a href="https://web.telegram.org/a/" class="main-footer__link" target="_blank">Telegram</a>
+                <a href="contacts.html"  class="main-footer__link">Contacts</a>
+                <a href="https://discord.com/" class="main-footer__link" target="_blank">Discord</a>
+            </div>
+            <button id="backToTopButton" class="main-footer__back-to-top-button">Back to top</button>
+            <p class="main-footer__rights-text">© 2026 Pagan Blood Games. All rights received.</p>
+        </section>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
